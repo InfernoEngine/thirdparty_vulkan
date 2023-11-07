@@ -5,7 +5,7 @@
 	<GlobalNamespace>potato</GlobalNamespace>
 
 	<StaticLibrary>
-		<Name>thirdparty_</Name>
+		<Name>thirdparty_vulkan</Name>
 		<SourceRoot>.</SourceRoot>
 		<ThirdParty>true</ThirdParty>
 		<ExportedIncludeDirectory>include</ExportedIncludeDirectory>
