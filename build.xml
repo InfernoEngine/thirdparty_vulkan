@@ -5,7 +5,7 @@
 	<GlobalNamespace>potato</GlobalNamespace>
 
 	<StaticLibrary>
-		<Name>thirdparty_winpix</Name>
+		<Name>thirdparty_</Name>
 		<SourceRoot>.</SourceRoot>
 		<ThirdParty>true</ThirdParty>
 		<ExportedIncludeDirectory>include</ExportedIncludeDirectory>
@@ -13,14 +13,34 @@
 		<Frozen>true</Frozen>
 		<FilterPlatform include="windows">
 			<FrozenDeployFiles>
-				bin\WinPixEventRuntime.dll
+				bin\windows\VkLayer_api_dump.dll
+				bin\windows\VkLayer_api_dump.json
+				bin\windows\VkLayer_gfxreconstruct.dll
+				bin\windows\VkLayer_gfxreconstruct.json
+				bin\windows\VkLayer_khronos_profiles.dll
+				bin\windows\VkLayer_khronos_profiles.json
+				bin\windows\VkLayer_khronos_shader_object.dll
+				bin\windows\VkLayer_khronos_shader_object.json
+				bin\windows\VkLayer_khronos_synchronization2.dll
+				bin\windows\VkLayer_khronos_synchronization2.json
+				bin\windows\VkLayer_khronos_validation.dll
+				bin\windows\VkLayer_khronos_validation.json
+				bin\windows\VkLayer_monitor.dll
+				bin\windows\VkLayer_monitor.json
+				bin\windows\VkLayer_screenshot.dll
+				bin\windows\VkLayer_screenshot.json
+				bin\windows\vulkan-1.dll
+				bin\windows\vulkan-1.pdb
 			</FrozenDeployFiles>
 
 			<FrozenLibraryFiles>
-				lib\WinPixEventRuntime.lib
+				lib\windows\vulkan-1.lib
 			</FrozenLibraryFiles>
 		</FilterPlatform>
 
 	</StaticLibrary>
 
 </Module>
+
+
+
