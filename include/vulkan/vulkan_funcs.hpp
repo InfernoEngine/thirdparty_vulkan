@@ -205,7 +205,7 @@ namespace VULKAN_HPP_NAMESPACE
                                                                                           Dispatch const & d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
-    return static_cast<Result>( d.vkGetPhysicalDeviceImageFormatProperties( m_physicalDevice,
+    return static_cast<Result>( d.vkGetPhysicalImageFormatProperties( m_physicalDevice,
                                                                             static_cast<VkFormat>( format ),
                                                                             static_cast<VkImageType>( type ),
                                                                             static_cast<VkImageTiling>( tiling ),
@@ -227,7 +227,7 @@ namespace VULKAN_HPP_NAMESPACE
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 
     VULKAN_HPP_NAMESPACE::ImageFormatProperties imageFormatProperties;
-    VkResult                                    result = d.vkGetPhysicalDeviceImageFormatProperties( m_physicalDevice,
+    VkResult                                    result = d.vkGetPhysicalImageFormatProperties( m_physicalDevice,
                                                                   static_cast<VkFormat>( format ),
                                                                   static_cast<VkImageType>( type ),
                                                                   static_cast<VkImageTiling>( tiling ),
@@ -5621,26 +5621,26 @@ namespace VULKAN_HPP_NAMESPACE
 
   template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
-    PhysicalDevice::getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
+    PhysicalDevice::getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 * pImageFormatInfo,
                                                VULKAN_HPP_NAMESPACE::ImageFormatProperties2 *               pImageFormatProperties,
                                                Dispatch const &                                             d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
-    return static_cast<Result>( d.vkGetPhysicalDeviceImageFormatProperties2( m_physicalDevice,
-                                                                             reinterpret_cast<const VkPhysicalDeviceImageFormatInfo2 *>( pImageFormatInfo ),
+    return static_cast<Result>( d.vkGetPhysicalImageFormatProperties2( m_physicalDevice,
+                                                                             reinterpret_cast<const VkPhysicalImageFormatInfo2 *>( pImageFormatInfo ),
                                                                              reinterpret_cast<VkImageFormatProperties2 *>( pImageFormatProperties ) ) );
   }
 
 #ifndef VULKAN_HPP_DISABLE_ENHANCED_MODE
   template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<VULKAN_HPP_NAMESPACE::ImageFormatProperties2>::type
-    PhysicalDevice::getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
+    PhysicalDevice::getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 
     VULKAN_HPP_NAMESPACE::ImageFormatProperties2 imageFormatProperties;
-    VkResult                                     result = d.vkGetPhysicalDeviceImageFormatProperties2( m_physicalDevice,
-                                                                   reinterpret_cast<const VkPhysicalDeviceImageFormatInfo2 *>( &imageFormatInfo ),
+    VkResult                                     result = d.vkGetPhysicalImageFormatProperties2( m_physicalDevice,
+                                                                   reinterpret_cast<const VkPhysicalImageFormatInfo2 *>( &imageFormatInfo ),
                                                                    reinterpret_cast<VkImageFormatProperties2 *>( &imageFormatProperties ) );
     resultCheck( static_cast<VULKAN_HPP_NAMESPACE::Result>( result ), VULKAN_HPP_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2" );
 
@@ -5649,14 +5649,14 @@ namespace VULKAN_HPP_NAMESPACE
 
   template <typename X, typename Y, typename... Z, typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<VULKAN_HPP_NAMESPACE::StructureChain<X, Y, Z...>>::type
-    PhysicalDevice::getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
+    PhysicalDevice::getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 
     StructureChain<X, Y, Z...>                     structureChain;
     VULKAN_HPP_NAMESPACE::ImageFormatProperties2 & imageFormatProperties = structureChain.template get<VULKAN_HPP_NAMESPACE::ImageFormatProperties2>();
-    VkResult                                       result                = d.vkGetPhysicalDeviceImageFormatProperties2( m_physicalDevice,
-                                                                   reinterpret_cast<const VkPhysicalDeviceImageFormatInfo2 *>( &imageFormatInfo ),
+    VkResult                                       result                = d.vkGetPhysicalImageFormatProperties2( m_physicalDevice,
+                                                                   reinterpret_cast<const VkPhysicalImageFormatInfo2 *>( &imageFormatInfo ),
                                                                    reinterpret_cast<VkImageFormatProperties2 *>( &imageFormatProperties ) );
     resultCheck( static_cast<VULKAN_HPP_NAMESPACE::Result>( result ), VULKAN_HPP_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2" );
 
@@ -10737,26 +10737,26 @@ namespace VULKAN_HPP_NAMESPACE
 
   template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE Result
-    PhysicalDevice::getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
+    PhysicalDevice::getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 * pImageFormatInfo,
                                                   VULKAN_HPP_NAMESPACE::ImageFormatProperties2 *               pImageFormatProperties,
                                                   Dispatch const &                                             d ) const VULKAN_HPP_NOEXCEPT
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
-    return static_cast<Result>( d.vkGetPhysicalDeviceImageFormatProperties2KHR( m_physicalDevice,
-                                                                                reinterpret_cast<const VkPhysicalDeviceImageFormatInfo2 *>( pImageFormatInfo ),
+    return static_cast<Result>( d.vkGetPhysicalImageFormatProperties2KHR( m_physicalDevice,
+                                                                                reinterpret_cast<const VkPhysicalImageFormatInfo2 *>( pImageFormatInfo ),
                                                                                 reinterpret_cast<VkImageFormatProperties2 *>( pImageFormatProperties ) ) );
   }
 
 #ifndef VULKAN_HPP_DISABLE_ENHANCED_MODE
   template <typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<VULKAN_HPP_NAMESPACE::ImageFormatProperties2>::type
-    PhysicalDevice::getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
+    PhysicalDevice::getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 
     VULKAN_HPP_NAMESPACE::ImageFormatProperties2 imageFormatProperties;
-    VkResult                                     result = d.vkGetPhysicalDeviceImageFormatProperties2KHR( m_physicalDevice,
-                                                                      reinterpret_cast<const VkPhysicalDeviceImageFormatInfo2 *>( &imageFormatInfo ),
+    VkResult                                     result = d.vkGetPhysicalImageFormatProperties2KHR( m_physicalDevice,
+                                                                      reinterpret_cast<const VkPhysicalImageFormatInfo2 *>( &imageFormatInfo ),
                                                                       reinterpret_cast<VkImageFormatProperties2 *>( &imageFormatProperties ) );
     resultCheck( static_cast<VULKAN_HPP_NAMESPACE::Result>( result ), VULKAN_HPP_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2KHR" );
 
@@ -10765,14 +10765,14 @@ namespace VULKAN_HPP_NAMESPACE
 
   template <typename X, typename Y, typename... Z, typename Dispatch>
   VULKAN_HPP_NODISCARD VULKAN_HPP_INLINE typename ResultValueType<VULKAN_HPP_NAMESPACE::StructureChain<X, Y, Z...>>::type
-    PhysicalDevice::getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
+    PhysicalDevice::getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo, Dispatch const & d ) const
   {
     VULKAN_HPP_ASSERT( d.getVkHeaderVersion() == VK_HEADER_VERSION );
 
     StructureChain<X, Y, Z...>                     structureChain;
     VULKAN_HPP_NAMESPACE::ImageFormatProperties2 & imageFormatProperties = structureChain.template get<VULKAN_HPP_NAMESPACE::ImageFormatProperties2>();
-    VkResult                                       result                = d.vkGetPhysicalDeviceImageFormatProperties2KHR( m_physicalDevice,
-                                                                      reinterpret_cast<const VkPhysicalDeviceImageFormatInfo2 *>( &imageFormatInfo ),
+    VkResult                                       result                = d.vkGetPhysicalImageFormatProperties2KHR( m_physicalDevice,
+                                                                      reinterpret_cast<const VkPhysicalImageFormatInfo2 *>( &imageFormatInfo ),
                                                                       reinterpret_cast<VkImageFormatProperties2 *>( &imageFormatProperties ) );
     resultCheck( static_cast<VULKAN_HPP_NAMESPACE::Result>( result ), VULKAN_HPP_NAMESPACE_STRING "::PhysicalDevice::getImageFormatProperties2KHR" );
 

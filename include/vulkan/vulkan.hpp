@@ -1016,7 +1016,7 @@ namespace VULKAN_HPP_NAMESPACE
       return ::vkGetPhysicalDeviceFormatProperties( physicalDevice, format, pFormatProperties );
     }
 
-    VkResult vkGetPhysicalDeviceImageFormatProperties( VkPhysicalDevice          physicalDevice,
+    VkResult vkGetPhysicalImageFormatProperties( VkPhysicalDevice          physicalDevice,
                                                        VkFormat                  format,
                                                        VkImageType               type,
                                                        VkImageTiling             tiling,
@@ -1024,7 +1024,7 @@ namespace VULKAN_HPP_NAMESPACE
                                                        VkImageCreateFlags        flags,
                                                        VkImageFormatProperties * pImageFormatProperties ) const VULKAN_HPP_NOEXCEPT
     {
-      return ::vkGetPhysicalDeviceImageFormatProperties( physicalDevice, format, type, tiling, usage, flags, pImageFormatProperties );
+      return ::vkGetPhysicalImageFormatProperties( physicalDevice, format, type, tiling, usage, flags, pImageFormatProperties );
     }
 
     void vkGetPhysicalDeviceProperties( VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties * pProperties ) const VULKAN_HPP_NOEXCEPT
@@ -2007,11 +2007,11 @@ namespace VULKAN_HPP_NAMESPACE
       return ::vkGetPhysicalDeviceFormatProperties2( physicalDevice, format, pFormatProperties );
     }
 
-    VkResult vkGetPhysicalDeviceImageFormatProperties2( VkPhysicalDevice                         physicalDevice,
-                                                        const VkPhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
+    VkResult vkGetPhysicalImageFormatProperties2( VkPhysicalDevice                         physicalDevice,
+                                                        const VkPhysicalImageFormatInfo2 * pImageFormatInfo,
                                                         VkImageFormatProperties2 *               pImageFormatProperties ) const VULKAN_HPP_NOEXCEPT
     {
-      return ::vkGetPhysicalDeviceImageFormatProperties2( physicalDevice, pImageFormatInfo, pImageFormatProperties );
+      return ::vkGetPhysicalImageFormatProperties2( physicalDevice, pImageFormatInfo, pImageFormatProperties );
     }
 
     void vkGetPhysicalDeviceQueueFamilyProperties2( VkPhysicalDevice           physicalDevice,
@@ -3014,11 +3014,11 @@ namespace VULKAN_HPP_NAMESPACE
       return ::vkGetPhysicalDeviceFormatProperties2KHR( physicalDevice, format, pFormatProperties );
     }
 
-    VkResult vkGetPhysicalDeviceImageFormatProperties2KHR( VkPhysicalDevice                         physicalDevice,
-                                                           const VkPhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
+    VkResult vkGetPhysicalImageFormatProperties2KHR( VkPhysicalDevice                         physicalDevice,
+                                                           const VkPhysicalImageFormatInfo2 * pImageFormatInfo,
                                                            VkImageFormatProperties2 *               pImageFormatProperties ) const VULKAN_HPP_NOEXCEPT
     {
-      return ::vkGetPhysicalDeviceImageFormatProperties2KHR( physicalDevice, pImageFormatInfo, pImageFormatProperties );
+      return ::vkGetPhysicalImageFormatProperties2KHR( physicalDevice, pImageFormatInfo, pImageFormatProperties );
     }
 
     void vkGetPhysicalDeviceQueueFamilyProperties2KHR( VkPhysicalDevice           physicalDevice,
@@ -7037,7 +7037,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
   template <>
-  struct StructExtends<PhysicalDeviceExternalImageFormatInfo, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<PhysicalDeviceExternalImageFormatInfo, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -7191,7 +7191,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
   template <>
-  struct StructExtends<ImageFormatListCreateInfo, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<ImageFormatListCreateInfo, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -7351,7 +7351,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
   template <>
-  struct StructExtends<ImageStencilUsageCreateInfo, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<ImageStencilUsageCreateInfo, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -8069,7 +8069,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
   template <>
-  struct StructExtends<VideoProfileListInfoKHR, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<VideoProfileListInfoKHR, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -9371,7 +9371,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
   template <>
-  struct StructExtends<PhysicalDeviceImageDrmFormatModifierInfoEXT, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<PhysicalDeviceImageDrmFormatModifierInfoEXT, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -9537,7 +9537,7 @@ namespace VULKAN_HPP_NAMESPACE
 
   //=== VK_EXT_filter_cubic ===
   template <>
-  struct StructExtends<PhysicalDeviceImageViewImageFormatInfoEXT, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<PhysicalDeviceImageViewImageFormatInfoEXT, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -11527,7 +11527,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
   template <>
-  struct StructExtends<ImageCompressionControlEXT, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<ImageCompressionControlEXT, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -12753,7 +12753,7 @@ namespace VULKAN_HPP_NAMESPACE
     };
   };
   template <>
-  struct StructExtends<OpticalFlowImageFormatInfoNV, PhysicalDeviceImageFormatInfo2>
+  struct StructExtends<OpticalFlowImageFormatInfoNV, PhysicalImageFormatInfo2>
   {
     enum
     {
@@ -13613,7 +13613,7 @@ namespace VULKAN_HPP_NAMESPACE
     PFN_vkEnumeratePhysicalDevices                     vkEnumeratePhysicalDevices                     = 0;
     PFN_vkGetPhysicalDeviceFeatures                    vkGetPhysicalDeviceFeatures                    = 0;
     PFN_vkGetPhysicalDeviceFormatProperties            vkGetPhysicalDeviceFormatProperties            = 0;
-    PFN_vkGetPhysicalDeviceImageFormatProperties       vkGetPhysicalDeviceImageFormatProperties       = 0;
+    PFN_vkGetPhysicalImageFormatProperties       vkGetPhysicalImageFormatProperties       = 0;
     PFN_vkGetPhysicalDeviceProperties                  vkGetPhysicalDeviceProperties                  = 0;
     PFN_vkGetPhysicalDeviceQueueFamilyProperties       vkGetPhysicalDeviceQueueFamilyProperties       = 0;
     PFN_vkGetPhysicalDeviceMemoryProperties            vkGetPhysicalDeviceMemoryProperties            = 0;
@@ -13760,7 +13760,7 @@ namespace VULKAN_HPP_NAMESPACE
     PFN_vkGetPhysicalDeviceFeatures2                    vkGetPhysicalDeviceFeatures2                    = 0;
     PFN_vkGetPhysicalDeviceProperties2                  vkGetPhysicalDeviceProperties2                  = 0;
     PFN_vkGetPhysicalDeviceFormatProperties2            vkGetPhysicalDeviceFormatProperties2            = 0;
-    PFN_vkGetPhysicalDeviceImageFormatProperties2       vkGetPhysicalDeviceImageFormatProperties2       = 0;
+    PFN_vkGetPhysicalImageFormatProperties2       vkGetPhysicalImageFormatProperties2       = 0;
     PFN_vkGetPhysicalDeviceQueueFamilyProperties2       vkGetPhysicalDeviceQueueFamilyProperties2       = 0;
     PFN_vkGetPhysicalDeviceMemoryProperties2            vkGetPhysicalDeviceMemoryProperties2            = 0;
     PFN_vkGetPhysicalDeviceSparseImageFormatProperties2 vkGetPhysicalDeviceSparseImageFormatProperties2 = 0;
@@ -13983,7 +13983,7 @@ namespace VULKAN_HPP_NAMESPACE
     PFN_vkGetPhysicalDeviceFeatures2KHR                    vkGetPhysicalDeviceFeatures2KHR                    = 0;
     PFN_vkGetPhysicalDeviceProperties2KHR                  vkGetPhysicalDeviceProperties2KHR                  = 0;
     PFN_vkGetPhysicalDeviceFormatProperties2KHR            vkGetPhysicalDeviceFormatProperties2KHR            = 0;
-    PFN_vkGetPhysicalDeviceImageFormatProperties2KHR       vkGetPhysicalDeviceImageFormatProperties2KHR       = 0;
+    PFN_vkGetPhysicalImageFormatProperties2KHR       vkGetPhysicalImageFormatProperties2KHR       = 0;
     PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR       vkGetPhysicalDeviceQueueFamilyProperties2KHR       = 0;
     PFN_vkGetPhysicalDeviceMemoryProperties2KHR            vkGetPhysicalDeviceMemoryProperties2KHR            = 0;
     PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR vkGetPhysicalDeviceSparseImageFormatProperties2KHR = 0;
@@ -14779,8 +14779,8 @@ namespace VULKAN_HPP_NAMESPACE
       vkEnumeratePhysicalDevices          = PFN_vkEnumeratePhysicalDevices( vkGetInstanceProcAddr( instance, "vkEnumeratePhysicalDevices" ) );
       vkGetPhysicalDeviceFeatures         = PFN_vkGetPhysicalDeviceFeatures( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceFeatures" ) );
       vkGetPhysicalDeviceFormatProperties = PFN_vkGetPhysicalDeviceFormatProperties( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceFormatProperties" ) );
-      vkGetPhysicalDeviceImageFormatProperties =
-        PFN_vkGetPhysicalDeviceImageFormatProperties( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceImageFormatProperties" ) );
+      vkGetPhysicalImageFormatProperties =
+        PFN_vkGetPhysicalImageFormatProperties( vkGetInstanceProcAddr( instance, "vkGetPhysicalImageFormatProperties" ) );
       vkGetPhysicalDeviceProperties = PFN_vkGetPhysicalDeviceProperties( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceProperties" ) );
       vkGetPhysicalDeviceQueueFamilyProperties =
         PFN_vkGetPhysicalDeviceQueueFamilyProperties( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceQueueFamilyProperties" ) );
@@ -14927,8 +14927,8 @@ namespace VULKAN_HPP_NAMESPACE
       vkGetPhysicalDeviceProperties2      = PFN_vkGetPhysicalDeviceProperties2( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceProperties2" ) );
       vkGetPhysicalDeviceFormatProperties2 =
         PFN_vkGetPhysicalDeviceFormatProperties2( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceFormatProperties2" ) );
-      vkGetPhysicalDeviceImageFormatProperties2 =
-        PFN_vkGetPhysicalDeviceImageFormatProperties2( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceImageFormatProperties2" ) );
+      vkGetPhysicalImageFormatProperties2 =
+        PFN_vkGetPhysicalImageFormatProperties2( vkGetInstanceProcAddr( instance, "vkGetPhysicalImageFormatProperties2" ) );
       vkGetPhysicalDeviceQueueFamilyProperties2 =
         PFN_vkGetPhysicalDeviceQueueFamilyProperties2( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceQueueFamilyProperties2" ) );
       vkGetPhysicalDeviceMemoryProperties2 =
@@ -15175,10 +15175,10 @@ namespace VULKAN_HPP_NAMESPACE
         PFN_vkGetPhysicalDeviceFormatProperties2KHR( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceFormatProperties2KHR" ) );
       if ( !vkGetPhysicalDeviceFormatProperties2 )
         vkGetPhysicalDeviceFormatProperties2 = vkGetPhysicalDeviceFormatProperties2KHR;
-      vkGetPhysicalDeviceImageFormatProperties2KHR =
-        PFN_vkGetPhysicalDeviceImageFormatProperties2KHR( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceImageFormatProperties2KHR" ) );
-      if ( !vkGetPhysicalDeviceImageFormatProperties2 )
-        vkGetPhysicalDeviceImageFormatProperties2 = vkGetPhysicalDeviceImageFormatProperties2KHR;
+      vkGetPhysicalImageFormatProperties2KHR =
+        PFN_vkGetPhysicalImageFormatProperties2KHR( vkGetInstanceProcAddr( instance, "vkGetPhysicalImageFormatProperties2KHR" ) );
+      if ( !vkGetPhysicalImageFormatProperties2 )
+        vkGetPhysicalImageFormatProperties2 = vkGetPhysicalImageFormatProperties2KHR;
       vkGetPhysicalDeviceQueueFamilyProperties2KHR =
         PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR( vkGetInstanceProcAddr( instance, "vkGetPhysicalDeviceQueueFamilyProperties2KHR" ) );
       if ( !vkGetPhysicalDeviceQueueFamilyProperties2 )

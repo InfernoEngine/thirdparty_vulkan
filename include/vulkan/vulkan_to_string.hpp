@@ -3660,7 +3660,7 @@ namespace VULKAN_HPP_NAMESPACE
       case StructureType::ePhysicalDeviceProperties2: return "PhysicalDeviceProperties2";
       case StructureType::eFormatProperties2: return "FormatProperties2";
       case StructureType::eImageFormatProperties2: return "ImageFormatProperties2";
-      case StructureType::ePhysicalDeviceImageFormatInfo2: return "PhysicalDeviceImageFormatInfo2";
+      case StructureType::ePhysicalImageFormatInfo2: return "PhysicalImageFormatInfo2";
       case StructureType::eQueueFamilyProperties2: return "QueueFamilyProperties2";
       case StructureType::ePhysicalDeviceMemoryProperties2: return "PhysicalDeviceMemoryProperties2";
       case StructureType::eSparseImageFormatProperties2: return "SparseImageFormatProperties2";

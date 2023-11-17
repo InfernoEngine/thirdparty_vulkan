@@ -8905,18 +8905,18 @@ namespace std
   };
 
   template <>
-  struct hash<VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2>
+  struct hash<VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2>
   {
-    std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 const & physicalDeviceImageFormatInfo2 ) const VULKAN_HPP_NOEXCEPT
+    std::size_t operator()( VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 const & physicalImageFormatInfo2 ) const VULKAN_HPP_NOEXCEPT
     {
       std::size_t seed = 0;
-      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImageFormatInfo2.sType );
-      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImageFormatInfo2.pNext );
-      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImageFormatInfo2.format );
-      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImageFormatInfo2.type );
-      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImageFormatInfo2.tiling );
-      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImageFormatInfo2.usage );
-      VULKAN_HPP_HASH_COMBINE( seed, physicalDeviceImageFormatInfo2.flags );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalImageFormatInfo2.sType );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalImageFormatInfo2.pNext );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalImageFormatInfo2.format );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalImageFormatInfo2.type );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalImageFormatInfo2.tiling );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalImageFormatInfo2.usage );
+      VULKAN_HPP_HASH_COMBINE( seed, physicalImageFormatInfo2.flags );
       return seed;
     }
   };

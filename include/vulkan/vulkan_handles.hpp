@@ -174,8 +174,8 @@ namespace VULKAN_HPP_NAMESPACE
   using FormatProperties2KHR = FormatProperties2;
   struct ImageFormatProperties2;
   using ImageFormatProperties2KHR = ImageFormatProperties2;
-  struct PhysicalDeviceImageFormatInfo2;
-  using PhysicalDeviceImageFormatInfo2KHR = PhysicalDeviceImageFormatInfo2;
+  struct PhysicalImageFormatInfo2;
+  using PhysicalImageFormatInfo2KHR = PhysicalImageFormatInfo2;
   struct QueueFamilyProperties2;
   using QueueFamilyProperties2KHR = QueueFamilyProperties2;
   struct PhysicalDeviceMemoryProperties2;
@@ -13624,17 +13624,17 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
     template <typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
-    VULKAN_HPP_NODISCARD Result getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
+    VULKAN_HPP_NODISCARD Result getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 * pImageFormatInfo,
                                                            VULKAN_HPP_NAMESPACE::ImageFormatProperties2 *               pImageFormatProperties,
                                                            Dispatch const & d VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) const VULKAN_HPP_NOEXCEPT;
 #ifndef VULKAN_HPP_DISABLE_ENHANCED_MODE
     template <typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
     VULKAN_HPP_NODISCARD typename ResultValueType<VULKAN_HPP_NAMESPACE::ImageFormatProperties2>::type
-      getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo,
+      getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo,
                                  Dispatch const & d                                           VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) const;
     template <typename X, typename Y, typename... Z, typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
     VULKAN_HPP_NODISCARD typename ResultValueType<VULKAN_HPP_NAMESPACE::StructureChain<X, Y, Z...>>::type
-      getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo,
+      getImageFormatProperties2( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo,
                                  Dispatch const & d                                           VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) const;
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
@@ -14103,17 +14103,17 @@ namespace VULKAN_HPP_NAMESPACE
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
     template <typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
-    VULKAN_HPP_NODISCARD Result getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 * pImageFormatInfo,
+    VULKAN_HPP_NODISCARD Result getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 * pImageFormatInfo,
                                                               VULKAN_HPP_NAMESPACE::ImageFormatProperties2 *               pImageFormatProperties,
                                                               Dispatch const & d VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) const VULKAN_HPP_NOEXCEPT;
 #ifndef VULKAN_HPP_DISABLE_ENHANCED_MODE
     template <typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
     VULKAN_HPP_NODISCARD typename ResultValueType<VULKAN_HPP_NAMESPACE::ImageFormatProperties2>::type
-      getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo,
+      getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo,
                                     Dispatch const & d                                           VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) const;
     template <typename X, typename Y, typename... Z, typename Dispatch = VULKAN_HPP_DEFAULT_DISPATCHER_TYPE>
     VULKAN_HPP_NODISCARD typename ResultValueType<VULKAN_HPP_NAMESPACE::StructureChain<X, Y, Z...>>::type
-      getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalDeviceImageFormatInfo2 & imageFormatInfo,
+      getImageFormatProperties2KHR( const VULKAN_HPP_NAMESPACE::PhysicalImageFormatInfo2 & imageFormatInfo,
                                     Dispatch const & d                                           VULKAN_HPP_DEFAULT_DISPATCHER_ASSIGNMENT ) const;
 #endif /* VULKAN_HPP_DISABLE_ENHANCED_MODE */
 
